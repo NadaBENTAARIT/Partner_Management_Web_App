@@ -1,0 +1,37 @@
+
+<app-menuadmin></app-menuadmin>
+<br><br>
+<!-- Editable table -->
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">
+    list partner
+  </h3>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <thead>
+          <tr>
+            <th class="text-center" *ngFor = "let i of headers"> 
+              {{i}} 
+          </th>
+          <th  class="text-center">edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let partenaire of partenaires">
+            <td class="pt-3-half" contenteditable="true" *ngFor = "let i of headers">{{partenaire[i]}} </td>
+           
+            <td>
+              <span class="table-remove"><button type="button"
+                  class="btn btn-danger btn-rounded btn-sm my-0" (click)="deletepartner(partenaire['email'])">Remove</button></span>
+            </td>
+          </tr>
+          <!-- This is our clonable table line -->
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Editable table -->

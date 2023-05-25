@@ -1,0 +1,48 @@
+
+<app-menuadmin></app-menuadmin>
+<br><br>
+<!-- Editable table -->
+<div class="card">
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">
+    list Request partner
+  </h3>
+  <h4 *ngIf="erreur == false" style="color:green;"> 
+    Your partner is successfully updated</h4>
+  <div class="card-body">
+    <div id="table" class="table-editable">
+     
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <thead>
+          <tr>
+            <th class="text-center" *ngFor = "let i of headers"> 
+              {{i}} 
+          </th>
+          <th  class="text-center">Accept</th>
+          <th  class="text-center">Refuse</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let demande of demandes">
+            <td class="pt-2-half" contenteditable="true" *ngFor = "let i of headers">{{demande[i]}} </td>
+           
+            <td>
+              <span class="table-accept">
+                 <button type="button" class="btn btn-success btn-rounded btn-sm my-0" 
+                 (click)="accept(demande)">  Accept</button></span>
+            </td>
+
+            <td>
+                <span class="table-remove"><button type="button" 
+                    class="btn btn-danger btn-rounded btn-sm my-0" (click)="refusedemande(demande)" >Refuse</button></span>
+              </td>
+          </tr>
+
+          <!-- This is our clonable table line -->
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Editable table -->

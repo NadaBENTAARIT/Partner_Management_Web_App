@@ -1,0 +1,63 @@
+<!-- Default form login -->
+<br><br>
+
+<div class="container">
+    <div class="row">
+    <div class="col-lg-3 col-sm-4">
+    </div>
+
+
+
+
+    <div class="col-lg-6 col-sm-4">
+  
+
+       
+
+<form class="text-center border border-light p-5" id="login-form" class="form" (ngSubmit)="onSubmit(f)" #f="ngForm" >
+
+    <p class="h4 mb-4">Join us</p>
+    <h4 *ngIf="erreur == false" style="color:green;"> 
+       Request successfully sended</h4>
+       <h4 *ngIf="erreurformulaire == true" style="color:red;">  All fields must be fulled
+    </h4>
+    <input [(ngModel)]="demande.first_name"  name="demande.first_name" type="text" id="defaultLoginFormLogin" class="form-control mb-4" placeholder="first_name" > 
+    
+    
+    <input  [(ngModel)]="demande.last_name"  name="demande.last_name" type="text" id="defaultLoginFormLogin" class="form-control mb-4" placeholder="Last_name" >
+
+    <input  [(ngModel)]="demande.birthdate"  name="demande.birthdate" type="date" id="defaultLoginFormLogin" class="form-control mb-4" placeholder="birthdate" >
+
+
+    <input  [(ngModel)]="demande.email" name="demande.email" type="email" id="defaultLoginFormLogin" class="form-control mb-4" placeholder="email">
+
+    <!-- Password -->
+    <input  [(ngModel)]="demande.tel"  name="demande.tel" type="number" id="defaultLoginFormLogin" class="form-control mb-4" placeholder="Tel">
+
+    <textarea  [(ngModel)]="demande.description" name="demande.description" class="form-control" id="exampleFormControlTextarea5" rows="5" placeholder="about you" ></textarea>
+
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit" >Send request</button>
+
+    <!-- Register -->
+    <p>Yet a member?
+        <a routerLink="partnerconnexion">
+            Sign in 
+        </a>
+    </p>
+
+    <!-- Social login -->
+   
+
+</form>
+<!-- Default form login -->
+</div>
+
+
+<div class="col-lg-3 col-sm-4">
+</div>
+
+
+</div>
+</div>

@@ -1,0 +1,92 @@
+<app-menupartner></app-menupartner>
+
+<br><br>
+<!--Section: Contact v.2-->
+<div class="container">
+<section class="mb-4">
+  
+
+
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a routerLink="partnereditprofile" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"  role="tab" aria-controls="nav-home" aria-selected="true">Profile</a>
+      <a routerLink="partnereditpassword" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"  role="tab" aria-controls="nav-profile" aria-selected="false">Password</a>
+    </div>
+  </nav>
+  
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+  </div>
+
+
+
+  
+  <!--Section heading-->
+  <!--Section description-->
+  
+
+  <div class="row">
+
+      <!--Grid column-->
+      <div class="col-md-9 mb-md-0 mb-5">
+
+              
+
+<form class="text-center border border-light p-5" id="login-form" class="form" (ngSubmit)="onSubmit(f)" #f="ngForm" >
+
+  <p class="h4 mb-4">Profile user</p>
+  
+     <h4 *ngIf="erreur" style="color:red;"> 
+      empty field!</h4>
+     <label>login:</label>
+     <input [(ngModel)]="login"  name="admin.login" type="text" id="defaultLoginFormLogin" class="form-control mb-4" placeholder="login">
+
+     <label>first_name:</label>
+
+  <input [(ngModel)]="first_name"  name="admin.first_name" type="text" id="defaultLoginFormLogin" class="form-control mb-4" placeholder="first_name">
+  <label>last_name:</label>
+
+  
+  <input  [(ngModel)]="last_name"  name="admin.last_name" type="text" id="defaultLoginFormLogin" class="form-control mb-4" placeholder="Last_name">
+  <label>email:</label>
+
+
+
+  <input  [(ngModel)]="email" name="admin.email" type="email" id="defaultLoginFormLogin" class="form-control mb-4" placeholder="email">
+
+  <label>tel:</label>
+
+  <input  [(ngModel)]="tel"  name="admin.tel" type="tel" id="defaultLoginFormLogin" class="form-control mb-4" placeholder="Tel">
+  <label>birthdate:</label>
+
+  <input  [(ngModel)]="birthdate"  name="admin.birthdate" type="date" id="defaultLoginFormLogin" class="form-control mb-4" placeholder="birthdate">
+
+
+
+  <!-- Sign in button -->
+  <button class="btn btn-info btn-block my-4" type="submit" >update profile</button>
+
+  <!-- Register -->
+  
+
+  <!-- Social login -->
+ 
+
+</form>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-3 text-center">
+         <!-- Card -->
+
+      </div>
+      <!--Grid column-->
+
+  </div>
+
+</section>
+<!--Section: Contact v.2-->
+</div>

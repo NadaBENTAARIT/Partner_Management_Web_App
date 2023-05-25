@@ -1,0 +1,58 @@
+<!--Navbar-->
+
+<mdb-navbar  SideClass="navbar navbar-expand-lg navbar-dark  red darken-4" [containerInside]="false" >
+
+      <!-- Navbar brand -->
+      
+    
+      <mdb-navbar-brand ><a class="navbar-brand" href="#">XXXEntreprise</a></mdb-navbar-brand>
+    
+      <!-- Collapsible content -->
+      <links>
+    
+        <!-- Links -->
+
+
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown" dropdown>
+            <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+              <mdb-icon fas icon="store"></mdb-icon> Roles<span class="caret"></span></a>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+              <a class="dropdown-item waves-light" mdbWavesEffect routerLink="admineditprofile">Edit profile</a>
+
+              <a class="dropdown-item waves-light" mdbWavesEffect routerLink="adminpartnerlistacceuil">List Partner</a>
+              <a class="dropdown-item waves-light" mdbWavesEffect href="#">Documents</a>
+              <a class="dropdown-item waves-light" mdbWavesEffect routerLink="listrequest">List partners request</a>
+
+
+
+            </div>
+          </li>
+
+
+
+
+         
+    
+          <!-- Dropdown -->
+          <li class="nav-item dropdown" dropdown>
+            <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+              <mdb-icon fas icon="user"></mdb-icon> {{first_name   }} {{ last_name   }} <span class="caret"></span></a>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+              
+              <a [routerLink]="" (click)="deconnexion()" class="dropdown-item waves-light"  >Log out</a>
+            
+             
+            </div>
+          </li>
+    
+        </ul>
+        <!-- Links -->
+      </links>
+      <!-- Collapsible content -->
+    
+    </mdb-navbar>
+
+
+
